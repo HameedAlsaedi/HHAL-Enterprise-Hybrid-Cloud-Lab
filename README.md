@@ -54,6 +54,12 @@ The complete modular design and engineering steps are mapped directly to the act
 ### 3. [Group Policy Management & Object Enforcement](documentation/group-policy-objects.md)
 * **Core Deliverables:** Global Group Policy Objects (GPOs) administration including drive mapping logic (S:, I:, H:) and localized security baselines.
 
+### 4. [System Updates & Backup Infrastructure](documentation/wsus-backups.md)
+* **Core Deliverables:** WSUS localized patching strategy for Windows clients and automated daily system state recovery procedures.
+
+### 5. [Containerization & Infrastructure Monitoring](documentation/containerization-monitoring.md)
+* **Core Deliverables:** Centralized container orchestration via Portainer CE and real-time infrastructure telemetry monitoring for the Linux service tier.
+
 ---
 
 ## 🆔 Identity & Core Active Directory Services
@@ -74,10 +80,6 @@ The complete modular design and engineering steps are mapped directly to the act
 #### 3️⃣ Linux Infrastructure Node: `HHAL-LNX01` (Ubuntu Server)
 * **Network IP Address:** `192.168.30.12` (Assigned to VLAN 30)
 * **Current Status:** Provisioned and prepared for Containerized DevOps workflows. Undergoing Docker Engine initialization and Portainer CE orchestration deployment.
-
-#### 4️⃣ Domain Deployed Workstations (DHCP Infrastructure)
-* **Windows Desktop:** `HHAL-CL01` (Successfully joined to the `hhal.local` Active Directory Domain)
-* **Linux Desktop:** `HHAL-LX01` (Successfully integrated with the `hhal.local` Active Directory Domain)
 
 #### 4️⃣ Domain Deployed Workstations (DHCP Infrastructure)
 * **Windows Desktop:** `HHAL-CL01` (Successfully joined to the `hhal.local` Active Directory Domain)
