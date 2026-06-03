@@ -41,7 +41,22 @@ An enterprise-grade Hybrid Cloud Infrastructure project demonstrating the integr
 
 ---
 
-### 🆔 Identity & Core Active Directory Services
+## 📂 Detailed Documentation Directory
+
+The complete modular design and engineering steps are mapped directly to the active documentation logs:
+
+### 1. [Network Architecture & Hybrid VPN Configuration](documentation/networking-vpn.md)
+* **Core Deliverables:** Enterprise pfSense localized VLAN tagging (10, 20, 30) and secure hybrid-cloud IPsec tunnel configuration linking the on-premise gateway to Azure Virtual Network Gateways.
+
+### 2. [Active Directory Core Domain Infrastructure](documentation/active-directory.md)
+* **Core Deliverables:** Multi-tier domain configuration mapping `hhal.local`, organizational unit (OU) design blueprints, and identity baseline structures.
+
+### 3. [Group Policy Management & Object Enforcement](documentation/group-policy-objects.md)
+* **Core Deliverables:** Global Group Policy Objects (GPOs) administration including drive mapping logic (S:, I:, H:) and localized security baselines.
+
+---
+
+## 🆔 Identity & Core Active Directory Services
 
 #### 1️⃣ Domain Controller: `HHAL-DC01` (Windows Server 2022)
 * **Network IP Address:** `192.168.30.10` (Assigned to VLAN 30)
@@ -50,18 +65,19 @@ An enterprise-grade Hybrid Cloud Infrastructure project demonstrating the integr
   * `HHAL_Admins` -> Target User: `HHAL Admin`
   * `HHAL_Users` -> Target Users: `Hameed IT`, `Hameed HR`
   * `HHAL_Groups` -> Security Groups: `IT_Group`, `HR_Group`
-* **Group Policy Objects (GPOs) Enforced:**
-  * `Drive-Mapping-GPO` (Automated mapping for S: Shared, I: IT, H: HR network volumes)
-  * `HHAL-Baseline-Policy` (Security Hardening & Configuration Baseline)
 
 #### 2️⃣ Management & Backup Node: `HHAL-SRV01` (Windows Server 2022)
 * **Network IP Address:** `192.168.30.11` (Assigned to VLAN 30)
 * **Core Roles Deployed:** WSUS (Automated Endpoint Patching), Scheduled Enterprise Backups (Execution runtime: 12:00 AM).
 * **Hybrid Identity Engine:** Microsoft Entra Connect Sync Agent (Automating On-Premise AD object sync directly to Microsoft Entra ID).
 
-#### 3️⃣ Linux Infrastructure Services: `HHAL-LNX01` (Ubuntu Server)
+#### 3️⃣ Linux Infrastructure Node: `HHAL-LNX01` (Ubuntu Server)
 * **Network IP Address:** `192.168.30.12` (Assigned to VLAN 30)
-* **Core Workloads:** Docker Engine Core Runtime & Portainer CE Centralized Container Management Dashboard.
+* **Current Status:** Provisioned and prepared for Containerized DevOps workflows. Undergoing Docker Engine initialization and Portainer CE orchestration deployment.
+
+#### 4️⃣ Domain Deployed Workstations (DHCP Infrastructure)
+* **Windows Desktop:** `HHAL-CL01` (Successfully joined to the `hhal.local` Active Directory Domain)
+* **Linux Desktop:** `HHAL-LX01` (Successfully integrated with the `hhal.local` Active Directory Domain)
 
 #### 4️⃣ Domain Deployed Workstations (DHCP Infrastructure)
 * **Windows Desktop:** `HHAL-CL01` (Successfully joined to the `hhal.local` Active Directory Domain)
