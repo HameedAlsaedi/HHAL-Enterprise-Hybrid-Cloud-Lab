@@ -92,7 +92,7 @@ The complete modular design and engineering steps are mapped directly to the act
 | Service | Screenshot |
 | :--- | :--- |
 | **Domain Admin** | ![AD Admin](screenshots/ad-admin.png) |
-| **Computer** | ![AD Computers](screenshots/ad-computers.png) |
+| **Computers** | ![AD Computers](screenshots/ad-computers.png) |
 | **Groups** | ![AD Groups](screenshots/ad-groups.png) |
 | **Users** | ![AD Users](screenshots/ad-users.png) |
 | **VPN Status** | ![VPN Status](screenshots/vpn-status.png) |
