@@ -89,16 +89,13 @@ The complete modular design and engineering steps are mapped directly to the act
 
 ## 📸 Project Evidence
 
-### Active Directory Setup
-- **Domain Admin Console:** ![AD Admin](screenshots/ad-admin.png)
-- **Computer Management:**  ![AD Computers](screenshots/ad-computers.png)
-- **Groups Management:**    ![AD Groups](screenshots/ad-groups.png)
-- **User Management:**      ![AD Users](screenshots/ad-users.png)
-
-### Network & Hybrid Connectivity
-- **VPN Tunnel Status:** ![VPN Status](screenshots/vpn-status.png)
-- **Azure VPN Gateway:** ![Azure VPN](screenshots/azure-vpn.png)
-- **Entra ID Synchronization:** ![Entra Sync](screenshots/entra-sync.png)
-
-### Services & Containerization
-- **Portainer Dashboard:** ![Portainer](screenshots/portainer-ui.png)
+| Service | Screenshot |
+| :--- | :--- |
+| **Domain Admin** | ![AD Admin](screenshots/ad-admin.png) |
+| **Computer Mgmt** | ![AD Computers](screenshots/ad-computers.png) |
+| **Groups Mgmt** | ![AD Groups](screenshots/ad-groups.png) |
+| **User Mgmt** | ![AD Users](screenshots/ad-users.png) |
+| **VPN Status** | ![VPN Status](screenshots/vpn-status.png) |
+| **Azure Gateway** | ![Azure VPN](screenshots/azure-vpn.png) |
+| **Entra Sync** | ![Entra Sync](screenshots/entra-sync.png) |
+| **Portainer UI** | ![Portainer](screenshots/portainer-ui.png) |
