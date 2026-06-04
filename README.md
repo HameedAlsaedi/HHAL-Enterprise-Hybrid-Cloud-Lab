@@ -12,18 +12,18 @@ An enterprise-grade Hybrid Cloud Infrastructure project demonstrating the integr
 
 ### 🌐 Cloud Networking
 * **Hub VNet:** `HHAL-VNet` (Address Space: `10.0.0.0/16`)
-  * **Subnet:** `10.0.0.0/24`
-  * **GatewaySubnet:** `10.0.1.0/27`
+  * **Subnet:** `10.0.0.0/24`
+  * **GatewaySubnet:** `10.0.1.0/27`
 * **Spoke VNet:** `HHAL-VNet02` (Address Space: `172.16.0.0/16`)
-  * **Subnet:** `172.16.0.0/24`
+  * **Subnet:** `172.16.0.0/24`
 * **VNet Peering:** `HHAL-Peering` (Configured between Hub & Spoke with Gateway Transit enabled)
 
 ### 🔒 VPN Gateway & Connectivity Cryptography
 * **Virtual Network Gateway:** `HHAL-VPN-GW` (Generation 1, SKU: `VpnGw1AZ`, Route-based)
 * **Local Network Gateway:** `HHAL-LNG` (Targeting On-Prem Public IP, Address Space: `192.168.0.0/16`)
 * **Connection Profile:** `HHAL-Azure-to-On-prem` (Site-to-Site IPsec Tunnel)
-  * **IKE Phase 1 (Main Mode):** AES256 | SHA256 | DH Group 2
-  * **IKE Phase 2 (IPsec Data):** AES256 | SHA256 | PFS Group 2
+  * **IKE Phase 1 (Main Mode):** AES256 | SHA256 | DH Group 2
+  * **IKE Phase 2 (IPsec Data):** AES256 | SHA256 | PFS Group 2
 
 ### 🖥️ Azure Virtual Machines
 * **VMLNX01:** Ubuntu Server (Private IP: `172.16.0.4` mapped inside `HHAL-VNet02`)
@@ -68,9 +68,9 @@ The complete modular design and engineering steps are mapped directly to the act
 * **Network IP Address:** `192.168.30.10` (Assigned to VLAN 30)
 * **Core Roles Deployed:** Active Directory Domain Services (Domain: `hhal.local`), Integrated DNS, Centralized DHCP Server.
 * **Organizational Unit (OU) & Directory Hierarchy:**
-  * `HHAL_Admins` -> Target User: `HHAL Admin`
-  * `HHAL_Users` -> Target Users: `Hameed IT`, `Hameed HR`
-  * `HHAL_Groups` -> Security Groups: `IT_Group`, `HR_Group`
+  * `HHAL_Admins` -> Target User: `HHAL Admin`
+  * `HHAL_Users` -> Target Users: `Hameed IT`, `Hameed HR`
+  * `HHAL_Groups` -> Security Groups: `IT_Group`, `HR_Group`
 
 #### 2️⃣ Management & Backup Node: `HHAL-SRV01` (Windows Server 2022)
 * **Network IP Address:** `192.168.30.11` (Assigned to VLAN 30)
