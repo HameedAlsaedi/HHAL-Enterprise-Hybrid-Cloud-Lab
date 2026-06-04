@@ -92,9 +92,9 @@ The complete modular design and engineering steps are mapped directly to the act
 | Service | Screenshot |
 | :--- | :--- |
 | **Domain Admin** | ![AD Admin](screenshots/ad-admin.png) |
-| **Computer Mgmt** | ![AD Computers](screenshots/ad-computers.png) |
-| **Groups Mgmt** | ![AD Groups](screenshots/ad-groups.png) |
-| **User Mgmt** | ![AD Users](screenshots/ad-users.png) |
+| **Computer** | ![AD Computers](screenshots/ad-computers.png) |
+| **Groups** | ![AD Groups](screenshots/ad-groups.png) |
+| **Users** | ![AD Users](screenshots/ad-users.png) |
 | **VPN Status** | ![VPN Status](screenshots/vpn-status.png) |
 | **Azure Gateway** | ![Azure VPN](screenshots/azure-vpn.png) |
 | **Entra Sync** | ![Entra Sync](screenshots/entra-sync.png) |
