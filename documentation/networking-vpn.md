@@ -37,30 +37,36 @@ To simulate an enterprise environment, traffic is segmented into dedicated VLANs
 
 ---
 
-## 🔒 Site-to-Site IPsec VPN Policy
+## 🔒 Site-to-Site IPsec VPN Configuration
 
-A secure, route-based policy-mimicking tunnel is established between pfSense and the Azure Virtual Network Gateway (`HHAL-VPN-GW`).
+A secure, route-based IPsec VPN tunnel is established between the on-premises pfSense firewall and the Azure Virtual Network Gateway (`HHAL-VPN-GW`). This connection ensures seamless and encrypted hybrid routing across the entire infrastructure.
 
-### 🔑 Phase 1 (IKE SA) Parameters
-* **Key Exchange Version:** IKEv2
-* **Authentication Method:** Mutual PSK (Pre-Shared Key)
-* **Encryption Algorithm:** AES 256 bits
-* **Hash / PRF:** SHA256
-* **Diffie-Hellman (DH) Group:** Group 2 (1048 bit)
+### 🔑 IKE Phase 1 (Security Association) Parameters
+This phase negotiates the secure management channel between pfSense and Azure:
 
-### 📦 Phase 2 & 3 (IPsec SA) Parameters
-To ensure full routing across both Azure VNets, two distinct phase mappings are created on pfSense:
+| Parameter | Configuration Value |
+| :--- | :--- |
+| **Key Exchange Version** | IKEv2 |
+| **Authentication Method** | Mutual PSK (Pre-Shared Key) |
+| **Encryption Algorithm** | AES 256-bit |
+| **Hash / PRF Engine** | SHA256 |
+| **Diffie-Hellman (DH) Group** | Group 2 (1024-bit) |
 
-#### Phase 2: Tunnel to Hub VNet
-* **Local Network:** `192.168.0.0/16` (Supernet covering all local VLANs)
-* **Remote Network:** `10.0.0.0/16` (Azure Hub)
+---
+
+### 📦 IPsec Phase 2 (Data Associations) Parameters
+To ensure full routing topology reachability across both interconnected Azure VNets (Hub & Spoke), two distinct Phase 2 cryptographic mappings are enforced on the pfSense firewall:
+
+#### 🔹 Tunnel Gateway 01: Connect to Azure Hub VNet
+* **Local Network (On-Prem Supernet):** `192.168.0.0/16` *(Covers VLANs 10, 20, and 30)*
+* **Remote Network (Azure Hub):** `10.0.0.0/16`
 * **Protocol:** ESP
 * **Encryption / Hash:** AES256 / SHA256
-* **PFS Key Group:** Group 2 (1024 bit)
+* **Perfect Forward Secrecy (PFS):** Enabled (DH Group 2)
 
-#### Phase 3: Tunnel to Spoke VNet02
-* **Local Network:** `192.168.0.0/16`
-* **Remote Network:** `172.16.0.0/16` (Azure Spoke)
+#### 🔹 Tunnel Gateway 02: Connect to Azure Spoke VNet (VNet02)
+* **Local Network (On-Prem Supernet):** `192.168.0.0/16`
+* **Remote Network (Azure Spoke):** `172.16.0.0/16`
 * **Protocol:** ESP
 * **Encryption / Hash:** AES256 / SHA256
-* **PFS Key Group:** Group 2 (1024 bit)
+* **Perfect Forward Secrecy (PFS):** Enabled (DH Group 2)
