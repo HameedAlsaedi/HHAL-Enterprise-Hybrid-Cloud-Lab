@@ -91,7 +91,7 @@ The complete modular design and engineering steps are mapped directly to the act
 
 | Service | Screenshot |
 | :--- | :--- |
-| **Domain Admin** | ![AD Admin](screenshots/ad-admin.png) |
+| **Domain Admin** | ![AD Admin](screenshots/ad-admin.png) ![AD Users](screenshots/ad-users.png) |
 | **Computers** | ![AD Computers](screenshots/ad-computers.png) |
 | **Groups** | ![AD Groups](screenshots/ad-groups.png) |
 | **Users** | ![AD Users](screenshots/ad-users.png) |
