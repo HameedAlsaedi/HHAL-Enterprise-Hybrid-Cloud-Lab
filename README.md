@@ -1,7 +1,7 @@
 # HHAL Hybrid Cloud Project
 
 An enterprise-grade Hybrid Cloud Infrastructure project demonstrating the integration of an On-Premises virtualized environment (via VirtualBox & pfSense) with Microsoft Azure using a secure Site-to-Site (IPsec) VPN and Entra ID identity synchronization.
-
+![HHAL Enterprise Hybrid Cloud Architecture](diagrams.png)
 ---
 
 ## ☁️ Azure Architecture
