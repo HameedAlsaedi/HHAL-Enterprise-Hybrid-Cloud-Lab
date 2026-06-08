@@ -91,7 +91,7 @@ The complete modular design and engineering steps are mapped directly to the act
 
 | Service | Screenshot |
 | :--- | :--- |
-| **Domain Admin** | ![AD Admin](screenshots/ad-admin.png) |
+| **Domain Admin** | ![AD Admin](screenshots/ad-admin.png) ![AD Users](screenshots/ad-users.png)  |
 | **Users** | ![AD Users](screenshots/ad-users.png) |
 | **VPN Status** | ![VPN Status](screenshots/vpn-status.png) |
 | **Azure Gateway** | ![Azure VPN](screenshots/azure-vpn.png) |
